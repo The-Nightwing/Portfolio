@@ -1,0 +1,134 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+
+  {% include 'main/navbar.html' %}
+
+  {% block head%}
+
+  <style>
+      .explain{
+          font-weight: bold;
+          font-style: italic;
+          font-size: 16px;
+          font-family: times new roman;
+      }
+
+      .pp{
+          background-color: white;
+      }
+  </style>
+
+  {%endblock%}
+`<br>
+<br>
+<br>
+  <div style="background-image: url('');" >
+  <div class="container">
+        <br>
+        <br>
+
+        <div class="row">
+
+            <div class="col s12 m6">
+                 <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                    <span class="card-title">ML/DL Projects</span>
+                    <p>Projects, I Love💗.</p>
+                    </div>
+            </div>
+            
+            </div>
+
+            <div class="col s12 m6">
+
+                <ul class="collapsible">
+                    <li>
+                    <div class="collapsible-header"><i class="material-icons">send</i>Emojifier</div>
+                    <div class="collapsible-body pp"><span class="explain">Predictig an appropriate emoji on a given user input text.Link to the repository is given below</span>
+                    <br>
+                    <a href="https://github.com/The-Nightwing/Emojifier"><i class="fab fa-github fa-2x"></i></a>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="collapsible-header"><i class="material-icons">send</i>Face Recognition</div>
+                    <div class="collapsible-body pp"><span class="explain">Recognizing faces by showing names of the person in front of the webcam.It is implemented using KNN and OpenCV</span>
+                    <br>
+                    <a href="https://github.com/The-Nightwing/Face_Detection"><i class="fab fa-github fa-2x"></i></a>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="collapsible-header"><i class="material-icons">send</i>Music Generation</div>
+                    <div class="collapsible-body pp"><span class="explain">Generating new tunes by training 128 songs, using RNN model.</span>
+                    <br>
+                    <a href"https://github.com/The-Nightwing/Music-Generation"><i class="fab fa-github fa-2x"></i></a>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-image: url('');" >
+
+    <div class="container">
+
+    <div class="row">
+        <div class="col s12 m6">
+            <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                    <span class="card-title">College Projects😄</span>
+                    <p></p>
+                    </div>
+        </div>
+    </div>
+
+    <div class='col s12 m6'>
+        <ul class="collapsible">
+            <li>
+            <div class="collapsible-header"><i class="material-icons">send</i>Fruket</div>
+            <div class="collapsible-body pp"><span class="explain">Minor project for DESX101(PIS) course. Made a game using processing and arduino</span>
+            <br>
+            <a href="https://github.com/The-Nightwing/Fruket-Game-"><i class="fab fa-github fa-2x"></i></a>
+            </div>
+            </li>
+            <li>
+            <div class="collapsible-header"><i class="material-icons">send</i>Assembler</div>
+            <div class="collapsible-body pp"><span class="explain">Converting computer instructions into machine binary codes</span>
+            <br>
+            <a href="https://github.com/The-Nightwing/Assembler-12-Bit-In-C-Language-"><i class="fab fa-github fa-2x"></i></a>
+            </div>
+            </li>
+            <li>
+            <div class="collapsible-header"><i class="material-icons">send</i>Cache Mapping System</div>
+            <div class="collapsible-body pp"><span class="explain">Implemented three cash mapping techniques in Java.</span>
+            <br>
+            <a href="https://github.com/The-Nightwing/Cache-Mapping-Techniques-Java-"><i class="fab fa-github fa-2x"></i></a>
+            </div>
+            </li>
+            <li>
+            <div class="collapsible-header"><i class="material-icons">send</i>FooCheckr</div>
+            <div class="collapsible-body pp"><span class="explain">Major project for DESX101(PIS) course. Made a device which detects the condtion of food in a container on the basis of alcohol concentration, humidity , temperature and light intensity.</span>
+            <br>
+            <a href="https://github.com/The-Nightwing/FooCheckr"><i class="fab fa-github fa-2x"></i></a>
+            </div>
+            </li>
+        </ul>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block script %}
+<script src="https://kit.fontawesome.com/4b58f03fab.js" crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems);
+  });
+</script>
+
+{% endblock %}
