@@ -29,8 +29,8 @@ SECRET_KEY = config('SECRET_KEY',default='')
 DEBUG = config('DEBUG',cast=bool,default=True)
 
 ALLOWED_HOSTS = [
-    'shivam12-portfolio.herokuapp.com',
-    'localhost'
+    host.strip()
+    for host in config('ALLOWED_HOSTS',default='').split(',')
 ]
 
 
