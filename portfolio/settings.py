@@ -61,7 +61,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-           r'C:/Users/Satyam/Desktop/portfolio/templates',
+            os.path.join(BASE_DIR, '/templates/'),
+            os.path.join(BASE_DIR,'templates')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
