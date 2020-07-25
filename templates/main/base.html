@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+
+    <link href="{% static 'css/materialize.min.css' %}" rel="stylesheet">
+     <style>
+        body{
+          background:url('https://qph.fs.quoracdn.net/main-qimg-8b585fb4a5c9fedbb899cfb0cf0331a7'); 
+          background-repeat:no-repeat; 
+          background-size: cover;
+        }
+      </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap" rel="stylesheet">
+    <script src="{% static 'js/materialize.min.js' %}"></script>
+    
+    {% block head %} {% endblock %}
+
+ </head>
+<body>
+    {% block content%} {% endblock %}
+    {% block script%} {% endblock %}
+    
+</body>
+</html>
+
