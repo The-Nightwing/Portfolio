@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY',default='')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'shivam12-portfolio.herokuapp.com',
@@ -133,3 +133,4 @@ STATICFILES_DIRS = (
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
