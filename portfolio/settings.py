@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY',default='')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'shivam12-portfolio.herokuapp.com',
+    'shivi-portfolio.herokuapp.com',
     'localhost',
     '127.0.0.1'
 ]
