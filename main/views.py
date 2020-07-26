@@ -3,24 +3,18 @@ from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-    context = {}
-    return render(request,'main/index.html',context)
+    return render(request, 'main/index.html')
 
 
 def projects(request):
-    context = {}
-    return render(request,'main/projects.html',context)
-
+    return render(request, 'main/projects.html')
 
 
 def skills(request):
-    context = {}
-    return render(request,'main/skills.html',context)
+    return render(request, 'main/skills.html')
 
 def life(request):
-    context = {}
-    return render(request,'main/life.html',context)
+    return render(request, 'main/life.html')
     
 def contact(request):
-    context = {}
-    return render(request,'main/context.html',context)
+    return render(request, 'main/context.html')
