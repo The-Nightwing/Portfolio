@@ -9,6 +9,9 @@
     font-style: italic;
     font-size: 20;
   }
+  .topnav{
+    overflow: hidden;
+  }
 </style>
 
 {%endblock %}
@@ -16,7 +19,7 @@
 <nav>
     <div class="nav-wrapper black darken-1">
       <a href="{% url 'index' %}" class="brand-logo name">Shivam Verma</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <ul id="nav-mobile" class="right hide-on-med-and-down topnav">
        <li><a href="{% url 'index' %}" id="n">Home</a></li>
         <li><a href="{% url 'projects' %}" id="n">Projects</a></li>
         <li><a href="{% url 'skills' %}" id="n">Skills</a></li>
