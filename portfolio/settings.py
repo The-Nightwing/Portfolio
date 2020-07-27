@@ -61,7 +61,7 @@ ROOT_URLCONF = 'portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [ 'templates' ],
+        'DIRS': [ r'c:\Users\verma\Desktop\project\Portfolio-01\templates' ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
