@@ -1,3 +1,5 @@
+{% extends 'main/base.html' %}
+
 {% block head %}
 <style>
   .name{
@@ -16,11 +18,12 @@
   body{
     height: 100%;
   }
-  
+
 </style>
 
 {%endblock %}
 
+{% block content %}
 <nav>
     <div class="nav-wrapper black darken-1">
       <a href="{% url 'index' %}" class="brand-logo name">Shivam Verma</a>
@@ -32,3 +35,5 @@
       </ul>
     </div>
   </nav>
+
+{% endblock %}
