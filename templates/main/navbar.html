@@ -1,4 +1,6 @@
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
   .name{
     font-family: times new roman;
@@ -12,9 +14,20 @@
 
 </style>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+</script>
+
 <nav class="black" style="padding: 0px 10px">
     <div class="nav-wrapper black darken-1">
       <a href="{% url 'index' %}" class="brand-logo name" id="n">Shivam Verma</a>
+      <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+        <i class="material-icons">menu</i>
+      </a>
       <ul id="nav-mobile" class="right hide-on-med-and-down responsive">
        <li><a href="{% url 'index' %}" id="n">Home</a></li>
         <li><a href="{% url 'projects' %}" id="n">Projects</a></li>
@@ -24,7 +37,7 @@
     </div>
   </nav>
 
-  <ul class="sidenav" id="mobile-demo">
+  <ul class="sidenav" id="mobile-nav">
       <li><a href="{% url 'index' %}" id="n">Home</a></li>
       <li><a href="{% url 'projects' %}" id="n">Projects</a></li>
       <li><a href="{% url 'skills' %}" id="n">Skills</a></li>
