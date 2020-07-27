@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
   .name{
@@ -12,20 +12,29 @@
     font-size: 16px;
   }
 
+  #n1{
+    color: white;
+    font-family: times new roman;
+    font-style: italic;
+    font-size: 18px;
+    padding-top: 10px;
+  }
+  
+
 </style>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 <script>
-  $(document).ready(function(){
-    $('.sidenav').sidenav();
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
   });
 </script>
 
 <nav class="black" style="padding: 0px 10px">
     <div class="nav-wrapper black darken-1">
-      <a href="{% url 'index' %}" class="brand-logo name" id="n">Shivam Verma</a>
-      <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+      <a href="{% url 'index' %}" class="brand-logo">Shivam Verma</a>
+      <a href="" class="sidenav-trigger" data-target="mobile-nav">
         <i class="material-icons">menu</i>
       </a>
       <ul id="nav-mobile" class="right hide-on-med-and-down responsive">
@@ -37,11 +46,11 @@
     </div>
   </nav>
 
-  <ul class="sidenav" id="mobile-nav">
-      <li><a href="{% url 'index' %}" id="n">Home</a></li>
-      <li><a href="{% url 'projects' %}" id="n">Projects</a></li>
-      <li><a href="{% url 'skills' %}" id="n">Skills</a></li>
-      <li><a  href="{% url 'life' %}" id="n">Life out of Code</a></li>
+  <ul class="sidenav black white-text" id="mobile-nav">
+      <li><a href="{% url 'index' %}" id="n1">Home</a></li>
+      <li><a href="{% url 'projects' %}" id="n1">Projects</a></li>
+      <li><a href="{% url 'skills' %}" id="n1">Skills</a></li>
+      <li><a  href="{% url 'life' %}" id="n1">Life out of Code</a></li>
 
   </ul>
 
