@@ -12,6 +12,3 @@ def skills(request):
 
 def life(request):
     return render(request, 'main/life.html')
-    
-def contact(request):
-    return render(request, 'main/context.html')
