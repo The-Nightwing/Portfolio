@@ -29,7 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'shivi-portfolio.herokuapp.com',
-    '127.0.0.1'
+    '127.0.0.1',
+    'sample-portfolio0101.herokuapp.com'
 ]
 
 
