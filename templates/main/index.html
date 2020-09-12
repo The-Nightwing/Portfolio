@@ -1,7 +1,7 @@
 {% extends 'main/base.html' %}
 
 {% block content %}
-
+  {% load static %}
     {% include 'main/navbar.html' %}
 
     {% block head %}
@@ -39,7 +39,7 @@
         <div class="col s12 m4">
             <div class="card black">
                 <div class="card-content white-text">
-                <img class="materialboxed responsive-img" width="650" src="https://ibb.co/tbfV7Nh">
+                <img class="materialboxed responsive-img" width="650" src="{% static 'images/me.jpeg' %}">
                 <span class="card-title title">Shivam Verma</span>
                 <span class="title">Aspiring Data Scientist</span>
                 </div>
