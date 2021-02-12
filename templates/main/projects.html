@@ -44,41 +44,15 @@
             <div class="col s12 m6">
 
                 <ul class="collapsible">
+                {% for dict in Own_Projects %}
                     <li>
-                    <div class="collapsible-header"><i class="material-icons">send</i>Emojifier</div>
-                    <div class="collapsible-body pp"><span class="explain">Predictig an appropriate emoji on a given user input text.Link to the repository is given below</span>
+                    <div class="collapsible-header"><i class="material-icons">send</i>{{dict.Name}}</div>
+                    <div class="collapsible-body pp"><span class="explain">{{dict.Description}}</span>
                     <br>
-                    <a href="https://github.com/The-Nightwing/Emojifier" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                    <a href={{dict.Link}} target="_blank"><i class="fab fa-github fa-2x"></i></a>
                     </div>
                     </li>
-                    <li>
-                    <div class="collapsible-header"><i class="material-icons">send</i>Face Recognition</div>
-                    <div class="collapsible-body pp"><span class="explain">Recognizing faces by showing names of the person in front of the webcam.It is implemented using KNN and OpenCV</span>
-                    <br>
-                    <a href="https://github.com/The-Nightwing/Face_Detection" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-                    </div>
-                    </li>
-                    <li>
-                    <div class="collapsible-header"><i class="material-icons">send</i>Music Generation</div>
-                    <div class="collapsible-body pp"><span class="explain">Generating new tunes by training 128 songs, using RNN model.</span>
-                    <br>
-                    <a href="https://github.com/The-Nightwing/Music-Generation" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-                    </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">send</i>Craigslist-Clone</div>
-                        <div class="collapsible-body pp"><span class="explain">Made a clone of a craigslist-delhi website with better Frontend work than the original website.The data shown is scraped from the https://delhi.craigslist.org/.</span>
-                        <br>
-                        <a href="https://github.com/The-Nightwing/Craigslist-Clone" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">send</i>Portfolio</div>
-                        <div class="collapsible-body pp"><span class="explain">Welcome to my Portfolio. Link to the Project Repository is given below.</span>
-                        <br>
-                        <a href="https://github.com/The-Nightwing/Portfolio-01" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-                        </div>
-                    </li>
+                {% endfor %}
                 </ul>
             </div>
             </div>
@@ -101,48 +75,15 @@
 
     <div class='col s12 m6'>
         <ul class="collapsible">
-            <li>
-            <div class="collapsible-header"><i class="material-icons">send</i>Fruket</div>
-            <div class="collapsible-body pp"><span class="explain">Minor project for DESX101(PIS) course. Made a game using processing and arduino</span>
-            <br>
-            <a href="https://github.com/The-Nightwing/Fruket-Game-" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-            </div>
-            </li>
-            <li>
-            <div class="collapsible-header"><i class="material-icons">send</i>Assembler</div>
-            <div class="collapsible-body pp"><span class="explain">Converting computer instructions into machine binary codes</span>
-            <br>
-            <a href="https://github.com/The-Nightwing/Assembler-12-Bit-In-C-Language-" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-            </div>
-            </li>
-            <li>
-            <div class="collapsible-header"><i class="material-icons">send</i>Cache Mapping System</div>
-            <div class="collapsible-body pp"><span class="explain">Implemented three cash mapping techniques in Java.</span>
-            <br>
-            <a href="https://github.com/The-Nightwing/Cache-Mapping-Techniques-Java-" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-            </div>
-            </li>
-            <li>
-            <div class="collapsible-header"><i class="material-icons">send</i>FooCheckr</div>
-            <div class="collapsible-body pp"><span class="explain">Major project for DESX101(PIS) course. Made a device which detects the condtion of food in a container on the basis of alcohol concentration, humidity , temperature and light intensity.</span>
-            <br>
-            <a href="https://github.com/The-Nightwing/FooCheckr"><i class="fab fa-github fa-2x"></i></a>
-            </div>
-            </li>
-            <li>
-                <div class="collapsible-header"><i class="material-icons">send</i>Color Switch(Game)</div>
-                <div class="collapsible-body pp"><span class="explain">Color Switch Game implemented in JavaFx, as a Major Project in CSE-201.</span>
-                <br>
-                <a href="https://github.com/The-Nightwing/ColorSwitch_Fx"><i class="fab fa-github fa-2x"></i></a>
-                </div>
-            </li>
-            <li>
-                <div class="collapsible-header"><i class="material-icons">send</i>Unix/Linux Shell(in C)</div>
-                <div class="collapsible-body pp"><span class="explain">Implemented a linux shell in C language with 10 commands. For more information about the project go to the github repository and read out the readme.txt</span>
-                <br>
-                <a href="https://github.com/The-Nightwing/Linux-Unix-Shell-in-C" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-                </div>
-                </li>
+            {% for dict in College_Projects %}
+                    <li>
+                    <div class="collapsible-header"><i class="material-icons">send</i>{{dict.Name}}</div>
+                    <div class="collapsible-body pp"><span class="explain">{{dict.Description}}</span>
+                    <br>
+                    <a href={{dict.Link}} target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                    </div>
+                    </li>
+                {% endfor %}
         </ul>
     </div>
   </div>
