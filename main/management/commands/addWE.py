@@ -2,10 +2,9 @@ from django.core.management.base import BaseCommand, CommandError
 from main.models import Project, WorkExperience
 import json
 import datetime 
-from django.utils import timezone
 
 class Command(BaseCommand):
-    help = 'Add Projects to the DataBase'
+    help = 'Add Work Experience to the DataBase'
 
     def handle(self, *args, **options):
         for d in data:
@@ -14,9 +13,8 @@ class Command(BaseCommand):
             description = d['Description'],
             link = d['Link'],
             startDate = d['startDate'],
-            endDate = d['endDate'],
+            endDate = d['endDate']
             )
-            p.save()
 
 
 data = [
@@ -35,6 +33,6 @@ data = [
         "Description":"Maintaining IIITD's anonymous polling and feedback system by feature additions, fixing bugs, and software upgradations.",
         "Link":"opine.iiitd.edu.in",
         "startDate":datetime.date(2020,10,10),
-        "endDate":timezone.now()
+        "endDate":datetime.now()
     }
 ]
