@@ -23,5 +23,24 @@ class Command(BaseCommand):
             Link = projects['Link']
             p = Project(project_name=Name,description=Description,project_type='Own',github_link=Link)            
             p.save()
-        
+
+
+data = {
+    "Own_Projects":[
+        {
+        "Name":"",
+        "Description":"",
+        "Link":""
+        }
+    ],
+
+    "College_Projects":[
+        {
+        "Name":"",
+        "Description":"",
+        "Link":""
+        }
+    ],
+
+}  
         

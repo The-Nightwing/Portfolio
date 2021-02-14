@@ -28,6 +28,7 @@ class WorkExperience(models.Model):
         
     name = models.CharField(max_length=256)
     position = models.CharField(max_length=256)
+    link = models.CharField(max_length=256,default="")
     description = models.CharField(max_length=10056)
     startDate = models.DateField()
     endDate = models.DateField()
