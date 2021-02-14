@@ -6,7 +6,7 @@ def index(request):
     return render(request, 'main/index.html')
 
 def projects(request):
-    with open('projects_data.json') as f:
+    with open('database.json') as f:
         context = json.load(f)
     return render(request, 'main/projects.html',context)
 
@@ -21,7 +21,7 @@ def work_experience(request):
 
 
 
-projects_data = {
+data = {
     "Own_Projects":[
         {
             "Name":"Emojifier",
@@ -84,5 +84,5 @@ projects_data = {
     ]
 }
 
-with open("projects_data.json", "w") as outfile:  
-    json.dump(projects_data, outfile) 
+with open("database.json", "w") as outfile:  
+    json.dump(data, outfile) 
