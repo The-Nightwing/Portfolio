@@ -1,6 +1,9 @@
 from django.urls import path
 from main import views
 
+from django.conf.urls.static import static
+from django.conf import settings
+
 urlpatterns = [
     path('',views.index, name="index"),
     path('project/',views.projects,name="projects"),
@@ -8,3 +11,7 @@ urlpatterns = [
     path('looc/',views.life,name="life"),
     path('work_experience',views.work_experience,name="wexp")
 ]
+
+if settings.DEBUG:
+        urlpatterns += static(settings.MEDIA_URL,
+                              document_root=settings.MEDIA_ROOT)

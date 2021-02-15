@@ -2,6 +2,20 @@ from django.db import models
 
 # Create your models here.
 
+
+class PersonalInfo(models.Model):
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name_plural = 'Personal Info'
+    
+    name = models.CharField(max_length=256)
+    description = models.CharField(max_length=2056)
+    bio = models.CharField(max_length=256)
+    img = models.ImageField(upload_to="media/", null=True, verbose_name="")
+
+    
 class Project(models.Model):
     def __str__(self):
         return self.project_name
