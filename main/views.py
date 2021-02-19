@@ -34,4 +34,19 @@ def life(request):
     return render(request, 'main/life.html')
 
 def work_experience(request):
-    return render(request,'main/work_exp.html')
+    we = models.WorkExperience.objects.all();
+    context = {
+        'work_ex':[]
+    }
+
+    for w in we:
+        context['work_ex'].append({
+        'name' : w.name,
+        'position' : w.position,
+        'link' : 'https://www.'+w.link,
+        'description' : w.description,
+        'startDate' : w.startDate,
+        'endDate' : w.endDate,
+        })
+
+    return render(request,'main/work_exp.html',context)

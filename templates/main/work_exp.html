@@ -1,14 +1,79 @@
 {% extends 'main/base.html' %}
 
+
 {% block content %}
+  {% load static %}
+    {% include 'main/navbar.html' %}
 
+    {% block head %}
+  <style>
 
-  {% include 'main/navbar.html' %}
+    .p1{
+      background-color: black;
+    }
+    .p2{
+      margin-top:130px
+    }
 
-  {% block head%}
-  {%endblock%}
-  
+    body{
+      height: 100%;
+    }
 
+    .p2{
+    font-family: 'PT Serif', serif;
+    font-size: 16px;
+    }
 
+    .title{
+    
+      font-style:italic;
+      font-family:times new roman;
+      font-size: 15px;
 
+    }
+
+  </style>
+  {% endblock %}
+  <div class="container p2">
+    {% for w in work_ex %}
+    <div class="row p1">
+        <div class="col s12 m4">
+            <div class="card black">
+                <div class="card-content white-text">
+                  {% ifequal w.name "Plunes Tech." %}
+                      <img class="materialboxed responsive-img" width="650" src="{% static 'images/plunes.jfif' %}">
+                    {%else%}
+                      <img class="materialboxed responsive-img" width="650" src="{% static 'images/iiitd.jpg' %}">
+                  {% endifequal %}
+
+                <span class="card-title title">{{w.name}}</span>
+                <br>
+                <span class="title">{{w.position}}</span>
+              </div>
+            </div>
+        </div>
+        <div class="col s12 m8">
+             <div class="card black">
+                <div class="card-content white-text">
+                <span class="card-title title">About</span>
+                <p class="p2">{{w.description}}</p>
+                <br>
+                <a href={{w.link}}>Website</a>
+        </div>
+        </div>
+        </div>
+      </div>
+  {% endfor %}
+{% endblock %}
+
+{% block script %}
+<script src="https://kit.fontawesome.com/4b58f03fab.js" crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.materialboxed');
+    var instances = M.Materialbox.init(elems);
+  });
+
+</script>
 {% endblock %}
