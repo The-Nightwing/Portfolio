@@ -12,7 +12,7 @@
       background-color: black;
     }
     .p2{
-      margin-top:130px
+      margin-top:110px
     }
 
     body{
@@ -47,7 +47,6 @@
                   {% endifequal %}
 
                 <span class="card-title title">{{w.name}}</span>
-                <br>
                 <span class="title">{{w.position}}</span>
               </div>
             </div>
@@ -55,8 +54,9 @@
         <div class="col s12 m8">
              <div class="card black">
                 <div class="card-content white-text">
-                <span class="card-title title">About</span>
+                <span class="card-title title">Description</span>
                 <p class="p2">{{w.description}}</p>
+                <span>{{w.startDate}}-{{w.endDate}}</span>
                 <br>
                 <a href={{w.link}}>Website</a>
         </div>
