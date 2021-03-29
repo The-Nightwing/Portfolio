@@ -65,3 +65,4 @@ def work_experience(request):
         })
 
     return render(request,'main/work_exp.html',context)
+
