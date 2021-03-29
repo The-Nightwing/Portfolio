@@ -15,7 +15,17 @@ class PersonalInfo(models.Model):
     bio = models.CharField(max_length=256)
     img = models.ImageField(upload_to="media/", null=True, verbose_name="")
 
-    
+class BlogStats(models.Model):
+    def __str__(self):
+        return "Stats"
+    class Meta:
+        verbose_name_plural = 'MediumStats'
+
+    total_blogs = models.IntegerField(default=0)
+    total_views = models.CharField(max_length=2056)
+    total_claps = models.CharField(max_length=2056)
+    total_fans = models.CharField(max_length=2056)
+
 class Project(models.Model):
     def __str__(self):
         return self.project_name

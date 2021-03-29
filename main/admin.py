@@ -6,5 +6,6 @@ from .models import *
 admin.site.register([
     Project,
     WorkExperience,
-    PersonalInfo
+    PersonalInfo,
+    BlogStats
 ])

@@ -31,7 +31,22 @@ def skills(request):
     return render(request, 'main/skills.html')
 
 def life(request):
-    return render(request, 'main/life.html')
+    stats = models.BlogStats.objects.all()
+
+    for stat in stats:
+        total_views = stat.total_views
+        total_claps = stat.total_claps
+        total_fans = stat.total_fans
+        total_no_blogs = stat.total_blogs
+
+    context = {
+        'views':total_views,
+        'claps':total_claps,
+        'fans': total_fans,
+        'no_blogs':total_no_blogs
+    }
+
+    return render(request, 'main/life.html',context)
 
 def work_experience(request):
     we = models.WorkExperience.objects.all();
