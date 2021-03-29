@@ -2,6 +2,9 @@ from django.shortcuts import render
 # Create your views here.
 import json
 from main import models
+import glob
+import os
+from django.http import FileResponse, Http404, HttpResponse
 
 def index(request):
     return render(request, 'main/index.html')
@@ -66,3 +69,10 @@ def work_experience(request):
 
     return render(request,'main/work_exp.html',context)
 
+def resume(request):
+    path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/image/Resume/'
+    arr = os.listdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/image/Resume/')
+    try:
+        return FileResponse(open(path+'/'+arr[0], 'rb'), content_type='application/pdf')
+    except FileNotFoundError:
+        raise Http404()

@@ -15,6 +15,15 @@ class PersonalInfo(models.Model):
     bio = models.CharField(max_length=256)
     img = models.ImageField(upload_to="media/", null=True, verbose_name="")
 
+
+class Resume(models.Model):
+    def __str__(self):
+        return "Resume"
+    class Meta:
+        verbose_name_plural = 'Resume'
+    file = models.FileField(upload_to="Resume/", null=True, blank=True)
+
+
 class BlogStats(models.Model):
     def __str__(self):
         return "Stats"

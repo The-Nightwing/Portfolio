@@ -7,5 +7,6 @@ admin.site.register([
     Project,
     WorkExperience,
     PersonalInfo,
-    BlogStats
+    BlogStats,
+    Resume
 ])

@@ -9,7 +9,8 @@ urlpatterns = [
     path('project/',views.projects,name="projects"),
     path('skills/',views.skills,name="skills"),
     path('looc/',views.life,name="life"),
-    path('work_experience',views.work_experience,name="wexp")
+    path('work_experience',views.work_experience,name="wexp"),
+    path('resume',views.resume,name="resume")
 ]
 
 if settings.DEBUG:
