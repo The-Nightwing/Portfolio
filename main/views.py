@@ -70,7 +70,7 @@ def work_experience(request):
     return render(request,'main/work_exp.html',context)
 
 def resume(request):
-    directory = "/images/Resume"
+    directory = "/images/Resume/"
   
     # Parent Directory path
     parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
