@@ -70,22 +70,6 @@ def work_experience(request):
     return render(request,'main/work_exp.html',context)
 
 def resume(request):
-    directory = "image"
-  
-    # Parent Directory path
-    parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    
-    # Path
-    path = os.path.join(parent_dir, directory)
-    os.mkdir(path)
-    directory = "Resume"
-  
-    # Parent Directory path
-    parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/image'
-    
-    # Path
-    path = os.path.join(parent_dir, directory)
-    os.mkdir(path)
 
     path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/image/Resume/'
     arr = os.listdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/image/Resume/')
