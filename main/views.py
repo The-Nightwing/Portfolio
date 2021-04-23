@@ -61,7 +61,7 @@ def work_experience(request):
         context['work_ex'].append({
         'name' : w.name,
         'position' : w.position,
-        'link' : 'https://www'+w.link,
+        'link' : 'https://www.'+w.link,
         'description' : w.description,
         'startDate' : w.startDate,
         'endDate' : w.endDate,
