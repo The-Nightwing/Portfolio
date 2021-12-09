@@ -40,11 +40,9 @@
         <div class="col s12 m4">
             <div class="card black">
                 <div class="card-content white-text">
-                  {% ifequal w.name "Plunes Tech." %}
-                      <img class="materialboxed responsive-img" width="650" src="{% static 'images/plunes.jfif' %}">
-                    {%else%}
-                      <img class="materialboxed responsive-img" width="650" src="{% static 'images/iiitd.jpg' %}">
-                  {% endifequal %}
+                  
+                      <img class="materialboxed responsive-img" width="650" src={{w.image_link}}>
+                  
 
                 <span class="card-title title">{{w.name}}</span>
                 <span class="title">{{w.position}}</span>

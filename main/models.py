@@ -65,3 +65,4 @@ class WorkExperience(models.Model):
     description = models.CharField(max_length=10056)
     startDate = models.DateField()
     endDate = models.DateField()
+    image_link = models.CharField(max_length=256,default="")

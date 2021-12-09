@@ -65,6 +65,7 @@ def work_experience(request):
         'description' : w.description,
         'startDate' : w.startDate,
         'endDate' : w.endDate,
+        'image_link': w.image_link,
         })
 
     return render(request,'main/work_exp.html',context)
