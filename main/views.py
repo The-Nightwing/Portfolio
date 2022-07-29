@@ -71,6 +71,7 @@ def work_experience(request):
     return render(request,'main/work_exp.html',context)
 
 def resume(request):
+    ##TODO: Add Resume, through saving file in database.
     path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/image/Resume/'
     arr = os.listdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/image/Resume/')
     
